@@ -12,3 +12,6 @@ This program simulates how a Self Checkout Area would run during three different
 # Improvements
 An option to check payment method and direct customers to the right machine will be added. 
 A method to calculate change and return it will be added
+
+# Example
+Checkout "lunchexample.txt" for an example simulation.
