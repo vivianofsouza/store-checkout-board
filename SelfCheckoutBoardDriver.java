@@ -31,31 +31,37 @@ public class SelfCheckoutBoardDriver {
 
 
     customerQueue.add(new Customer("Customer A", checkouts, "cash", 100.0, 100.0));
-    customerQueue.add(new Customer("Customer B", checkouts, "cash", 10.0, 10.0));
+    customerQueue.add(new Customer("Customer B", checkouts, "card", 10.0, 10.0));
     customerQueue.add(new Customer("Customer C", checkouts, "cash", 1.0, 1.0));
-
-    
+    customerQueue.add(new Customer("Customer D", checkouts, "card", 100.0, 100.0));
+    customerQueue.add(new Customer("Customer E", checkouts, "cash", 10.0, 10.0));
+    customerQueue.add(new Customer("Customer F", checkouts, "card", 1.0, 1.0));
+    customerQueue.add(new Customer("Customer G", checkouts, "card", 1.0, 1.0));
 
     //randomize checkouts systems
     checkouts.addCheckout(new Checkout(1, 500.00, true, true, true));
-    checkouts.addCheckout(new Checkout(2, 500.00, true, true, false));
+    checkouts.addCheckout(new Checkout(2, 500.00, true, true, true));
     checkouts.addCheckout(new Checkout(3, 500.00, true, false, true));
-    checkouts.addCheckout(new Checkout(4, 500.00, true, true, false));
+    checkouts.addCheckout(new Checkout(4, 500.00, true, true, true));
     checkouts.addCheckout(new Checkout(5, 500.00, true, true, true));
-    checkouts.addCheckout(new Checkout(6, 500.00, true, true, false));
+    checkouts.addCheckout(new Checkout(6, 500.00, true, true, true));
 
     for (Customer customer : customerQueue) {
       System.out.println("Welcome, " + customer.getName() + "!");
 
       for (Checkout checkout: checkouts.getAllCheckouts()) {
-        if (checkout.isOpen()) {
-          System.out.println(customer.getName() + ", proceed to " + checkout);
-          checkout.setStatus(false);
+        if (checkouts.isFull()) {
+          System.out.println("All checkouts are in use. Please wait for the next available checkout.");
           break;
         }
         
+        if (checkout.isOpen()) {
+          System.out.println(customer.getName() + ", proceed to " + checkout);
+          checkout.setStatus(false);
+          checkouts.setNumInUse();
+          break;
+        } 
       }
-      
     }
     
     customerQueueManager.display();

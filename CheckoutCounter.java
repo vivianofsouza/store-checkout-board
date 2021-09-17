@@ -88,15 +88,18 @@ public class CheckoutCounter implements Subject {
         return "Not enough cash deposited. Please deposit enough cash to meet your bill total.";
       }
     }
+  }*/
+
+  public void setNumInUse() {
+    numInUse += 1;
+
+    if (numInUse >= 6)
+      isFull = true;
   }
 
   public boolean isFull() {
     return isFull;
   }
-
-  public int getSize() {
-    return checkouts.size();
-  }*/
 
   public ArrayList<Checkout> getAllCheckouts() {
     return checkouts;

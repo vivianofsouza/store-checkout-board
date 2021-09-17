@@ -33,6 +33,7 @@ public class CustomerQueueManager implements Observer {
   * Displays the bestsellers list.
   */
   public void display() {
+    System.out.println("\n");
     System.out.println("Open Checkouts:"); //This is what the customer line sees.
     for (Checkout checkout : checkouts) {
       String output = "";
