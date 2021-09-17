@@ -1,0 +1,244 @@
+-----SIMULATION BEGIN------
+Welcome, Customer I!
+
+
+Open Checkouts:
+Checkout #1 is open. Card: Yes, Cash: Yes
+Checkout #2 is open. Card: Yes, Cash: Yes
+Checkout #3 is open. Card: No, Cash: Yes
+Checkout #4 is open. Card: Yes, Cash: Yes
+Checkout #5 is open. Card: Yes, Cash: Yes
+Checkout #6 is open. Card: Yes, Cash: Yes
+Checkout #7 is open. Card: Yes, Cash: Yes
+Checkout #8 is open. Card: Yes, Cash: Yes
+
+
+I, please proceed to Checkout #1
+
+Welcome, Customer T!
+
+
+Open Checkouts:
+Checkout #2 is open. Card: Yes, Cash: Yes
+Checkout #3 is open. Card: No, Cash: Yes
+Checkout #4 is open. Card: Yes, Cash: Yes
+Checkout #5 is open. Card: Yes, Cash: Yes
+Checkout #6 is open. Card: Yes, Cash: Yes
+Checkout #7 is open. Card: Yes, Cash: Yes
+Checkout #8 is open. Card: Yes, Cash: Yes
+
+
+T, please proceed to Checkout #2
+
+Welcome, Customer Y!
+
+
+Open Checkouts:
+Checkout #3 is open. Card: No, Cash: Yes
+Checkout #4 is open. Card: Yes, Cash: Yes
+Checkout #5 is open. Card: Yes, Cash: Yes
+Checkout #6 is open. Card: Yes, Cash: Yes
+Checkout #7 is open. Card: Yes, Cash: Yes
+Checkout #8 is open. Card: Yes, Cash: Yes
+
+
+Y, please proceed to Checkout #3
+
+Welcome, Customer P!
+
+
+Open Checkouts:
+Checkout #4 is open. Card: Yes, Cash: Yes
+Checkout #5 is open. Card: Yes, Cash: Yes
+Checkout #6 is open. Card: Yes, Cash: Yes
+Checkout #7 is open. Card: Yes, Cash: Yes
+Checkout #8 is open. Card: Yes, Cash: Yes
+
+
+P, please proceed to Checkout #4
+
+Welcome, Customer D!
+
+
+Open Checkouts:
+Checkout #5 is open. Card: Yes, Cash: Yes
+Checkout #6 is open. Card: Yes, Cash: Yes
+Checkout #7 is open. Card: Yes, Cash: Yes
+Checkout #8 is open. Card: Yes, Cash: Yes
+
+
+D, please proceed to Checkout #5
+
+Welcome, Customer M!
+
+
+Open Checkouts:
+Checkout #6 is open. Card: Yes, Cash: Yes
+Checkout #7 is open. Card: Yes, Cash: Yes
+Checkout #8 is open. Card: Yes, Cash: Yes
+
+
+M, please proceed to Checkout #6
+
+Welcome, Customer O!
+
+
+Open Checkouts:
+Checkout #7 is open. Card: Yes, Cash: Yes
+Checkout #8 is open. Card: Yes, Cash: Yes
+
+
+O, please proceed to Checkout #7
+
+Welcome, Customer G!
+
+
+Open Checkouts:
+Checkout #8 is open. Card: Yes, Cash: Yes
+
+
+G, please proceed to Checkout #8
+
+Welcome, Customer A!
+
+
+Open Checkouts:
+
+
+All checkouts are in use. Please wait for the next available checkout.
+A, please proceed to Checkout #1
+
+Welcome, Customer R!
+
+
+Open Checkouts:
+Checkout #2 is open. Card: Yes, Cash: Yes
+Checkout #3 is open. Card: No, Cash: Yes
+Checkout #4 is open. Card: Yes, Cash: Yes
+Checkout #5 is open. Card: Yes, Cash: Yes
+Checkout #6 is open. Card: Yes, Cash: Yes
+Checkout #7 is open. Card: Yes, Cash: Yes
+Checkout #8 is open. Card: Yes, Cash: Yes
+
+
+R, please proceed to Checkout #2
+
+Welcome, Customer K!
+
+
+Open Checkouts:
+Checkout #3 is open. Card: No, Cash: Yes
+Checkout #4 is open. Card: Yes, Cash: Yes
+Checkout #5 is open. Card: Yes, Cash: Yes
+Checkout #6 is open. Card: Yes, Cash: Yes
+Checkout #7 is open. Card: Yes, Cash: Yes
+Checkout #8 is open. Card: Yes, Cash: Yes
+
+
+K, please proceed to Checkout #3
+
+Welcome, Customer E!
+
+
+Open Checkouts:
+Checkout #4 is open. Card: Yes, Cash: Yes
+Checkout #5 is open. Card: Yes, Cash: Yes
+Checkout #6 is open. Card: Yes, Cash: Yes
+Checkout #7 is open. Card: Yes, Cash: Yes
+Checkout #8 is open. Card: Yes, Cash: Yes
+
+
+E, please proceed to Checkout #4
+
+Welcome, Customer H!
+
+
+Open Checkouts:
+Checkout #5 is open. Card: Yes, Cash: Yes
+Checkout #6 is open. Card: Yes, Cash: Yes
+Checkout #7 is open. Card: Yes, Cash: Yes
+Checkout #8 is open. Card: Yes, Cash: Yes
+
+
+H, please proceed to Checkout #5
+
+Welcome, Customer Z!
+
+
+Open Checkouts:
+Checkout #6 is open. Card: Yes, Cash: Yes
+Checkout #7 is open. Card: Yes, Cash: Yes
+Checkout #8 is open. Card: Yes, Cash: Yes
+
+
+Z, please proceed to Checkout #6
+
+Welcome, Customer L!
+
+
+Open Checkouts:
+Checkout #7 is open. Card: Yes, Cash: Yes
+Checkout #8 is open. Card: Yes, Cash: Yes
+
+
+L, please proceed to Checkout #7
+
+Welcome, Customer C!
+
+
+Open Checkouts:
+Checkout #8 is open. Card: Yes, Cash: Yes
+
+
+C, please proceed to Checkout #8
+
+Welcome, Customer V!
+
+
+Open Checkouts:
+
+
+All checkouts are in use. Please wait for the next available checkout.
+V, please proceed to Checkout #1
+
+Welcome, Customer N!
+
+
+Open Checkouts:
+Checkout #2 is open. Card: Yes, Cash: Yes
+Checkout #3 is open. Card: No, Cash: Yes
+Checkout #4 is open. Card: Yes, Cash: Yes
+Checkout #5 is open. Card: Yes, Cash: Yes
+Checkout #6 is open. Card: Yes, Cash: Yes
+Checkout #7 is open. Card: Yes, Cash: Yes
+Checkout #8 is open. Card: Yes, Cash: Yes
+
+
+N, please proceed to Checkout #2
+
+Welcome, Customer X!
+
+
+Open Checkouts:
+Checkout #3 is open. Card: No, Cash: Yes
+Checkout #4 is open. Card: Yes, Cash: Yes
+Checkout #5 is open. Card: Yes, Cash: Yes
+Checkout #6 is open. Card: Yes, Cash: Yes
+Checkout #7 is open. Card: Yes, Cash: Yes
+Checkout #8 is open. Card: Yes, Cash: Yes
+
+
+X, please proceed to Checkout #3
+
+Welcome, Customer F!
+
+
+Open Checkouts:
+Checkout #4 is open. Card: Yes, Cash: Yes
+Checkout #5 is open. Card: Yes, Cash: Yes
+Checkout #6 is open. Card: Yes, Cash: Yes
+Checkout #7 is open. Card: Yes, Cash: Yes
+Checkout #8 is open. Card: Yes, Cash: Yes
+
+
+F, please proceed to Checkout #4

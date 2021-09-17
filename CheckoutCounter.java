@@ -1,9 +1,9 @@
 import java.util.ArrayList;
 
-/**THIS IS THE SUBJECT
- * Creates Bestsellers, an implementation of Subject. 
- * Allows observers to be registered, notified, and removed. 
- * Allows books to be added. 
+/*
+ * Creates CheckCounter, an implementation of Subject. 
+ * Allows observers (customers) to be added and removed. 
+ * Allows checkouts to be added.
  * @author Vivian D'Souza
  */
 public class CheckoutCounter implements Subject {
@@ -13,7 +13,7 @@ public class CheckoutCounter implements Subject {
   private int numInUse;
 
   /**
-  * Creates a BestSellers object.
+  * Creates a CheckoutCounter object.
   */
   public CheckoutCounter() {
     observers = new ArrayList<Observer>();
@@ -23,34 +23,24 @@ public class CheckoutCounter implements Subject {
   }
 
   /**
-  * Registers an observer to the BestSellers subject. 
-  * @param observer an observer Object which will subscribe to BestSellers
+  * Registers an observer to a checkout subject. 
+  * @param observer an observer Object which will subscribe to checkouts
   */
   public void registerObserver(Observer observer) {
     observers.add(observer);
   }
 
   /**
-  * Removes an observer from subscription to the BestSellers subject. 
-  * @param observer an observer Object which will be removed from BestSellers
+  * Removes an observer from subscription to the CheckoutCounter subject. 
+  * @param observer an observer Object which will be removed from CheckoutCounter
   */
   public void removeObserver(Observer observer) {
     observers.remove(observer);
   }
 
   /**
-  * Notifies an observer when a new book is added.
-  * @param book the book that the observers will be notified about.
-  */
-  public void notifyObservers(Checkout checkout) {
-    for (Observer observer: observers) {
-      observer.update(checkout);
-    }
-  }
-
-  /**
-  * Adds a new book to the list and notifies observers.
-  * @param book an Book Object whose addition will be sent as a notification.
+  * Adds a new checkout to the list and notifies observers.
+  * @param checkout an Checkout Object whose addition will be seen as an update on the checkoutBoard
   */
   public void addCheckout(Checkout checkout) {
     checkouts.add(checkout);
@@ -59,16 +49,11 @@ public class CheckoutCounter implements Subject {
     }
   }
 
-  public String useCheckout(Checkout checkout, Customer customer) {
+  /**
+  * To be implemented later
+  */
+  /*public String useCheckout(Checkout checkout, Customer customer) {
     System.out.println("Processing Transaction....");
-
-    try {
-      Thread.sleep(4 * 1000);
-    } catch (InterruptedException ie) {
-      Thread.currentThread().interrupt();
-    }
-
-    checkout.setStatus(true);
     return "Transaction successful! Please take your receipt. Have a great day!";
     /*if (customer.getPaymentMethod().equals("card")) {
       return "Transaction successful! Please take your receipt. Have a great day!";
@@ -85,12 +70,15 @@ public class CheckoutCounter implements Subject {
         }
       } else { // if cash is not enough to satisfy the bill
         return "Not enough cash deposited. Please deposit enough cash to meet your bill total.";
-      }*/
-    }
+      }
+    }*/
 
+  /**
+  * Increments/Decrements numInUse any time a checkout's state changes 
+  * @param i an int of new checkouts in use/open
+  */
   public void setNumInUse(int i) {
     numInUse += i;
-
     if (numInUse >= 8) {
       isFull = true;
     } else {
@@ -98,18 +86,34 @@ public class CheckoutCounter implements Subject {
     }
   }
 
+  /**
+  * Returns numInUse
+  * @return numInUse, int holding # of checkouts in use
+  */
   public int getNumInUse() {
     return numInUse;
   }
 
+  /**
+  * Returns isFull
+  * @return isFull, a boolean stating whether the entire counter is full or not
+  */
   public boolean isFull() {
     return isFull;
   }
 
+  /**
+  * Sets isFull
+  * @param isFull, a boolean stating whether the entire counter is full or not
+  */
   public void setStatus(boolean isFull) {
-    isFull = false;
+    this.isFull = isFull;
   }
 
+  /**
+  * Returns checkouts
+  * @return checkouts, an arrayList holding all the checkouts
+  */
   public ArrayList<Checkout> getAllCheckouts() {
     return checkouts;
   }

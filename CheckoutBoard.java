@@ -2,8 +2,8 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
-/**THIS IS AN OBSERVER
- * Creates Store which implements Observer and acts as a queue of bestsellers.
+/*
+ * Creates CheckoutBoard which implements Observer and acts as a queue of checkouts.
  * @author Vivian D'Souza
  */
 public class CheckoutBoard implements Observer {
@@ -18,23 +18,23 @@ public class CheckoutBoard implements Observer {
   public CheckoutBoard(Subject subject) {
     this.subject = subject;
     subject.registerObserver(this);
-    checkouts = new LinkedList<Checkout>(); //needs to be an implementation of a queue    
+    checkouts = new LinkedList<Checkout>();   
   }
 
   /**
-  * Updates the bestsellers list.
-  * @param book the book to be added
+  * Updates the checkout list.
+  * @param checkout the checkout to be added
   */
   public void update(Checkout checkout) {
     checkouts.add(checkout);
   }
 
   /**
-  * Displays the bestsellers list.
+  * Displays the Checkouts board.
   */
   public void display() {
     System.out.println("\n");
-    System.out.println("Open Checkouts:"); //This is what the customer line sees.
+    System.out.println("Open Checkouts:"); 
     for (Checkout checkout : checkouts) {
       String output = "";
 
@@ -54,10 +54,7 @@ public class CheckoutBoard implements Observer {
         }
         System.out.println(output);
       } 
-      
-      
     }
     System.out.println("\n");
   }
-  
 }

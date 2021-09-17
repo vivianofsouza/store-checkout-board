@@ -2,35 +2,36 @@ import java.io.*;
 import java.util.*;
 /**
  * Runs the Self Checkout Board
+ * @author Vivian D'Souza
  */
 public class SelfCheckoutBoardDriver {
     
   /**
-     * Creates the CheckoutArea and Checkouts along with the queue of Customers
-     * Displays checkouts and their states
-     * Displays customers
+     * Initalizes the lists of Customers and Checkouts, along with the CheckoutBoard
+     * Runs the simulation
      */
   public void run() {
-    ArrayList<Customer> customerQueue = new ArrayList<Customer>(); //line of customers - observer 1
-    CheckoutCounter checkouts = new CheckoutCounter(); //holder of subjects
-    Observer checkoutBoard = new CheckoutBoard(checkouts); //holder of observers
-    TransactionHandler transactionHandler = new TransactionHandler();
+    ArrayList<Customer> customerQueue = new ArrayList<Customer>(); // line of customers 
+    CheckoutCounter checkouts = new CheckoutCounter(); // line of checkouts - holder of subjects (checkouts)
+    Observer checkoutBoard = new CheckoutBoard(checkouts); // Checkout Board - view of observers (the customers)
+    TransactionHandler transactionHandler = new TransactionHandler(); // handles the transactions
+
+    // Reading in selected simulation file
     Scanner fileInput = new Scanner(System.in);
     String fileName = fileInput.next();
 
-    // Reading in selected simulation file
-    try {
-      
+    try { 
       fileInput.close();
       File setting = new File(fileName);
       Scanner scanner = new Scanner(setting);
       while (scanner.hasNextLine()) {
+        // intializing customer list with lines from file
         Customer myCustomer = new Customer(scanner.next(), checkouts, scanner.next(), Double.parseDouble(scanner.next()), Double.parseDouble(scanner.next()));
         customerQueue.add(myCustomer);
       }
       scanner.close();
     } catch (FileNotFoundException e) {
-      System.out.println("Error while reading in file");
+      System.out.println("Error while reading file.");
       e.printStackTrace();
     }
 
@@ -44,6 +45,7 @@ public class SelfCheckoutBoardDriver {
     checkouts.addCheckout(new Checkout(7, 500.00, true, true, true));
     checkouts.addCheckout(new Checkout(8, 500.00, true, true, true));
 
+    // Starting simulation
     System.out.println("-----SIMULATION BEGIN------");
     transactionHandler.handleTransaction(customerQueue, checkouts, checkoutBoard);
     System.out.println("-----SIMULATION END------");
