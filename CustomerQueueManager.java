@@ -40,25 +40,24 @@ public class CustomerQueueManager implements Observer {
 
       if (checkout.isOpen()) {
         output += "Checkout #" + checkout.getNum() + " is open.";
-      } else {
-        output += "Checkout #" + checkout.getNum() + " is NOT open.";
-      }
+
+        if (checkout.getCardStatus()) {
+          output += " Card: Yes,";
+        } else {
+          output += " Card: No,";
+        }
+  
+        if (checkout.getCashStatus()) {
+          output += " Cash: Yes";
+        } else {
+          output += " Cash: No";
+        }
+        System.out.println(output);
+      } 
       
-
-      if (checkout.getCardStatus()) {
-        output += " Card: Yes,";
-      } else {
-        output += " Card: No,";
-      }
-
-      if (checkout.getCashStatus()) {
-        output += " Cash: Yes";
-      } else {
-        output += " Cash: No";
-      }
-
-      System.out.println(output);
+      
     }
-    System.out.println();
+    System.out.println("\n");
   }
+  
 }

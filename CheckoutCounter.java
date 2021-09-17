@@ -60,9 +60,17 @@ public class CheckoutCounter implements Subject {
   }
 
   public String useCheckout(Checkout checkout, Customer customer) {
-    //numInUse += 1;
-    //checkout.setStatus(inUse);
-    if (customer.getPaymentMethod().equals("card")) {
+    System.out.println("Processing Transaction....");
+
+    try {
+      Thread.sleep(4 * 1000);
+    } catch (InterruptedException ie) {
+      Thread.currentThread().interrupt();
+    }
+
+    checkout.setStatus(true);
+    return "Transaction successful! Please take your receipt. Have a great day!";
+    /*if (customer.getPaymentMethod().equals("card")) {
       return "Transaction successful! Please take your receipt. Have a great day!";
     } else { //if paying with cash
       if (customer.getAmountPaid() == customer.getBillTotal()) { // if cash paid equals bill total
@@ -77,15 +85,17 @@ public class CheckoutCounter implements Subject {
         }
       } else { // if cash is not enough to satisfy the bill
         return "Not enough cash deposited. Please deposit enough cash to meet your bill total.";
-      }
+      }*/
     }
-  }
 
   public void setNumInUse(int i) {
     numInUse += i;
 
-    if (numInUse >= 8)
+    if (numInUse >= 8) {
       isFull = true;
+    } else {
+      isFull = false;
+    }
   }
 
   public boolean isFull() {

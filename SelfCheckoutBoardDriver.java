@@ -80,29 +80,42 @@ public class SelfCheckoutBoardDriver {
 
    int z = 0; 
    while (z < customerQueue.size()) {
-    for (Checkout checkout: checkouts.getAllCheckouts()) {
-      if (checkouts.isFull()) {
-        System.out.println("All checkouts are in use. Please wait for the next available checkout.");
-        break;
+    
+    System.out.println("Welcome, " + customerQueue.get(z).getName() + "!");
+    customerQueueManager.display();
+
+    if (checkouts.isFull()) {
+      System.out.println("All checkouts are in use. Please wait for the next available checkout.");
+      try {
+        Thread.sleep(4 * 1000);
+      } catch (InterruptedException ie) {
+        Thread.currentThread().interrupt();
       }
 
+      for (Checkout checkout: checkouts.getAllCheckouts()) {
+        checkout.setStatus(true);
+      }
+
+      //checkout.setStatus(true);
+    }
+
+    for (Checkout checkout: checkouts.getAllCheckouts()) {
       if (checkout.isOpen()) {
         System.out.println(customerQueue.get(z).getName() + ", proceed to " + checkout);
         checkout.setStatus(false);
         checkouts.setNumInUse(1);
-        System.out.println(checkouts.useCheckout(checkout, customerQueue.get(z)));
+        System.out.println();
+        //checkout.setStatus(true);
         // can't remove here bc still using checkout
         break;
-      }   
+      }
+
+      
     }
     z++; 
+     
    }
 
-
-    
-
-    
-   customerQueueManager.display();
 
 
   }
