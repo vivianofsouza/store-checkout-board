@@ -59,18 +59,9 @@ public class CheckoutCounter implements Subject {
     }
   }
 
-  /*public Checkout findCheckout(int i) {
-    for (Checkout c:checkouts) {
-      if (c.getNum() == i) {
-        return c;
-      }
-    }
-    return null;
-  }
-
-  public String useCheckout(Checkout checkout, Customer customer, boolean inUse) {
-    numInUse += 1;
-    checkout.setStatus(inUse);
+  public String useCheckout(Checkout checkout, Customer customer) {
+    //numInUse += 1;
+    //checkout.setStatus(inUse);
     if (customer.getPaymentMethod().equals("card")) {
       return "Transaction successful! Please take your receipt. Have a great day!";
     } else { //if paying with cash
@@ -88,12 +79,12 @@ public class CheckoutCounter implements Subject {
         return "Not enough cash deposited. Please deposit enough cash to meet your bill total.";
       }
     }
-  }*/
+  }
 
-  public void setNumInUse() {
-    numInUse += 1;
+  public void setNumInUse(int i) {
+    numInUse += i;
 
-    if (numInUse >= 6)
+    if (numInUse >= 8)
       isFull = true;
   }
 
@@ -104,4 +95,13 @@ public class CheckoutCounter implements Subject {
   public ArrayList<Checkout> getAllCheckouts() {
     return checkouts;
   }
+
+  /*  public Checkout findCheckout(int i) {
+    for (Checkout c:checkouts) {
+      if (c.getNum() == i) {
+        return c;
+      }
+    }
+    return null;
+  }*/
 }

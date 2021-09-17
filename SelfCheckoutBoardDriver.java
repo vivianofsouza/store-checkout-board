@@ -37,6 +37,8 @@ public class SelfCheckoutBoardDriver {
     customerQueue.add(new Customer("Customer E", checkouts, "cash", 10.0, 10.0));
     customerQueue.add(new Customer("Customer F", checkouts, "card", 1.0, 1.0));
     customerQueue.add(new Customer("Customer G", checkouts, "card", 1.0, 1.0));
+    customerQueue.add(new Customer("Customer H", checkouts, "card", 1.0, 1.0));
+    customerQueue.add(new Customer("Customer I", checkouts, "card", 1.0, 1.0));
 
     //randomize checkouts systems
     checkouts.addCheckout(new Checkout(1, 500.00, true, true, true));
@@ -45,8 +47,10 @@ public class SelfCheckoutBoardDriver {
     checkouts.addCheckout(new Checkout(4, 500.00, true, true, true));
     checkouts.addCheckout(new Checkout(5, 500.00, true, true, true));
     checkouts.addCheckout(new Checkout(6, 500.00, true, true, true));
+    checkouts.addCheckout(new Checkout(7, 500.00, true, true, true));
+    checkouts.addCheckout(new Checkout(8, 500.00, true, true, true));
 
-    for (Customer customer : customerQueue) {
+    /*for (Customer customer : customerQueue) {
       System.out.println("Welcome, " + customer.getName() + "!");
 
       for (Checkout checkout: checkouts.getAllCheckouts()) {
@@ -54,20 +58,53 @@ public class SelfCheckoutBoardDriver {
           System.out.println("All checkouts are in use. Please wait for the next available checkout.");
           break;
         }
-        
+
         if (checkout.isOpen()) {
           System.out.println(customer.getName() + ", proceed to " + checkout);
           checkout.setStatus(false);
-          checkouts.setNumInUse();
+          checkouts.setNumInUse(1);
+          System.out.println(checkouts.useCheckout(checkout, customer));
+          // can't remove here bc still using checkout
           break;
-        } 
+        }
+        
+        
+        
       }
+
+      checkouts.removeObserver(customer);
+
+      //checkouts.setNumInUse(-1);//can't remove here bc still on same customer
+      //checkout.setStatus(true);
+    }*/
+
+   int z = 0; 
+   while (z < customerQueue.size()) {
+    for (Checkout checkout: checkouts.getAllCheckouts()) {
+      if (checkouts.isFull()) {
+        System.out.println("All checkouts are in use. Please wait for the next available checkout.");
+        break;
+      }
+
+      if (checkout.isOpen()) {
+        System.out.println(customerQueue.get(z).getName() + ", proceed to " + checkout);
+        checkout.setStatus(false);
+        checkouts.setNumInUse(1);
+        System.out.println(checkouts.useCheckout(checkout, customerQueue.get(z)));
+        // can't remove here bc still using checkout
+        break;
+      }   
     }
+    z++; 
+   }
+
+
     
-    customerQueueManager.display();
+
+    
+   customerQueueManager.display();
 
 
-    //checkouts.useCheckout(one, customer1, true);
   }
 
   public static void main(String[] args){
