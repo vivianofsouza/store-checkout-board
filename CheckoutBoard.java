@@ -6,7 +6,7 @@ import java.util.Queue;
  * Creates Store which implements Observer and acts as a queue of bestsellers.
  * @author Vivian D'Souza
  */
-public class CustomerQueueManager implements Observer {
+public class CheckoutBoard implements Observer {
   private Subject subject;
   private String title;
   private Queue<Checkout> checkouts;
@@ -15,7 +15,7 @@ public class CustomerQueueManager implements Observer {
   * Creates a CustomerQueue object and initalizes a queue of checkouts. 
   * @param subject a subject to which the customer will be assigned to.
   */
-  public CustomerQueueManager(Subject subject) {
+  public CheckoutBoard(Subject subject) {
     this.subject = subject;
     subject.registerObserver(this);
     checkouts = new LinkedList<Checkout>(); //needs to be an implementation of a queue    

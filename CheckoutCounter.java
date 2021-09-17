@@ -114,12 +114,4 @@ public class CheckoutCounter implements Subject {
     return checkouts;
   }
 
-  /*  public Checkout findCheckout(int i) {
-    for (Checkout c:checkouts) {
-      if (c.getNum() == i) {
-        return c;
-      }
-    }
-    return null;
-  }*/
 }

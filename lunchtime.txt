@@ -1,0 +1,23 @@
+I	cash	47.76	50.00
+T	card	62.75	62.75
+Y	card	28.44	28.44
+P	card	36.10	36.10
+D	cash	6.01	10.00		
+M	card	5.85	5.85
+
+O	cash	18.98	20.00
+G	card	27.71	27.71
+A	card	24.61	24.61
+R	card	16.70	16.70
+K	cash	7.98	7.98	
+E	card	15.88	15.88
+
+H	cash	10.00	10.00
+Z	card	35.71	35.71
+L	cash	23.02	23.02
+C	card	15.87	15.87
+V	cash	6.05	10.00		
+N	card	11.88	11.88
+
+X	cash	6.05	10.00		
+F	card	11.88	11.88
