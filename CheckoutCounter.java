@@ -98,8 +98,16 @@ public class CheckoutCounter implements Subject {
     }
   }
 
+  public int getNumInUse() {
+    return numInUse;
+  }
+
   public boolean isFull() {
     return isFull;
+  }
+
+  public void setStatus(boolean isFull) {
+    isFull = false;
   }
 
   public ArrayList<Checkout> getAllCheckouts() {

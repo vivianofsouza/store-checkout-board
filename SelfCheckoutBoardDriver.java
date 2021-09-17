@@ -39,6 +39,7 @@ public class SelfCheckoutBoardDriver {
     customerQueue.add(new Customer("Customer G", checkouts, "card", 1.0, 1.0));
     customerQueue.add(new Customer("Customer H", checkouts, "card", 1.0, 1.0));
     customerQueue.add(new Customer("Customer I", checkouts, "card", 1.0, 1.0));
+    customerQueue.add(new Customer("Customer J", checkouts, "card", 1.0, 1.0));
 
     //randomize checkouts systems
     checkouts.addCheckout(new Checkout(1, 500.00, true, true, true));
@@ -83,7 +84,6 @@ public class SelfCheckoutBoardDriver {
     
     System.out.println("Welcome, " + customerQueue.get(z).getName() + "!");
     customerQueueManager.display();
-
     if (checkouts.isFull()) {
       System.out.println("All checkouts are in use. Please wait for the next available checkout.");
       try {
@@ -94,9 +94,9 @@ public class SelfCheckoutBoardDriver {
 
       for (Checkout checkout: checkouts.getAllCheckouts()) {
         checkout.setStatus(true);
+        checkouts.setNumInUse(-1);
       }
-
-      //checkout.setStatus(true);
+      checkouts.setStatus(false);
     }
 
     for (Checkout checkout: checkouts.getAllCheckouts()) {
