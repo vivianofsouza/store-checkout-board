@@ -17,6 +17,7 @@ public class SelfCheckoutBoardDriver {
     TransactionHandler transactionHandler = new TransactionHandler(); // handles the transactions
 
     // Reading in selected simulation file
+    System.out.println("Please enter the name of the file from which the simulation would be read");
     Scanner fileInput = new Scanner(System.in);
     String fileName = fileInput.next();
 
